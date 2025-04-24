@@ -44,19 +44,19 @@ class LaravelInstallerServiceProvider extends ServiceProvider
     protected function publishFiles()
     {
         $this->publishes([
-            __DIR__.'/../Config/installer.php' => base_path('config/installer.php'),
+            __DIR__.'/../Config/installer.php' => config_path('installer.php'),
         ], 'laravelinstaller');
 
         $this->publishes([
-            __DIR__.'/../assets' => public_path('installer'),
+            __DIR__.'/../assets' => public_path('vendor/installer'),
         ], 'laravelinstaller');
 
         $this->publishes([
-            __DIR__.'/../Views' => base_path('resources/views/vendor/installer'),
+            __DIR__.'/../Views' => resource_path('views/vendor/installer'),
         ], 'laravelinstaller');
 
         $this->publishes([
-            __DIR__.'/../Lang' => base_path('resources/lang'),
+            __DIR__.'/../Lang' => lang_path('lang'),
         ], 'laravelinstaller');
     }
 }
