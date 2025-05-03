@@ -134,13 +134,13 @@ class EnvironmentManager
             'BROADCAST_DRIVER='.$request->broadcast_driver."\n".
             'CACHE_DRIVER='.$request->cache_driver."\n".
             'SESSION_DRIVER='.$request->session_driver."\n".
-            'QUEUE_DRIVER='.$request->queue_driver."\n".
+            'QUEUE_CONNECTION='.$request->queue_driver."\n".
             'FILESYSTEM_DISK='.'public'."\n".
             'LOG_CHANNEL='.'daily';
         /*'REDIS_HOST=' . $request->redis_hostname . "\n" .
         'REDIS_PASSWORD=' . $request->redis_password . "\n" .
         'REDIS_PORT=' . $request->redis_port . "\n\n" .
-        'MAIL_DRIVER=' . $request->mail_driver . "\n" .
+        'MAIL_MAILER=' . $request->mail_driver . "\n" .
         'MAIL_HOST=' . $request->mail_host . "\n" .
         'MAIL_PORT=' . $request->mail_port . "\n" .
         'MAIL_USERNAME=' . $request->mail_username . "\n" .
